@@ -32,7 +32,7 @@ class ServerBootstrap extends ConfigServer {
   }
 
   async dbConnect(): Promise<DataSource> {
-    return await new DataSource(this.typeORMConfig);
+    return await new DataSource(this.typeORMConfig).initialize(); 
   }
 
   /**
